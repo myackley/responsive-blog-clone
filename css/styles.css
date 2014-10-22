@@ -72,16 +72,15 @@ div, :before, :after {
 .offset_left_12-12 {margin-left: 91.54%;}
 
 
-.col_4-12, .col_7-12 {background-color: red;}
-
-
 /* ================
 === base styles ===
 =================*/
 body {
+  width: 100%;
   height: 100%;
-  background: url(/img/mars.jpg) 0 0 no-repeat;
+  background: url(../img/mars.jpg) 0 0 #888 no-repeat;
   background-size: cover;
+  transition: all 100ms ease;
 }
 a {text-decoration: none;}
 ul {list-style-type: none; padding: 0; margin: 0;}
@@ -118,8 +117,79 @@ ul {list-style-type: none; padding: 0; margin: 0;}
   font-size: .8em;
 }
 
+.grid {margin-top: 100px;}
+
+/* aside */
+.aside {width: 270px; margin-left: 6.95%;}
+.aside-header {
+  background-color: #ffeb00;
+  padding: 20px;
+}
+.aside-header h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* article */
+.content-header {
+  background-color: #fff200;
+  height: 35px;
+  max-width: 1000px;
+  z-index: 1;
+  position: relative;
+}
+.content-header p {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 13px;
+  height: 35px;
+  line-height: 2.8;
+}
+.content-header p:before, .content-footer ul:before {
+  content: "<";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 20;
+}
+.content-header p:after, .content-footer ul:after {
+  content: ">";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 21;
+}
+
+.content-body {
+  background-color: #fff;
+  max-width: 1000px;
+  padding: 35px 15px 30px;
+  line-height: 1.55em;
+  margin-bottom: 0;
+}
+
+.content-footer {
+  background-color: #fff;
+  max-width: 1000px;
+  height: 30px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  position: relative;
+  line-height: 1.7;
+}
+.content-footer li {
+  display: inline-block;
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+
 /* media queries */
 @media all and (max-width: 480px) {
+
   /* establish columns */
   [class*="col_"] {
     width: 100%;
@@ -135,15 +205,28 @@ ul {list-style-type: none; padding: 0; margin: 0;}
   .row {
     margin: 0;
   }
+  .grid {
+    margin-top: 50px;
+  }
 
   /* nav bar */
   .nav-global .logo {
-    /* padding */
+    padding-left: 10px;
   }
+  .nav-global .share li:first-child {
+    display: none;
+  }
+
+  /* aside */
+  .col_4-12, .aside {
+    display: none;
+  }
+
+
 }
 
 @media all and (max-width: 768px) {
-  /* establish columns */
+  /* cols */
   [class*="col_"] {
     width: 100%;
     margin-bottom: 1em;
@@ -163,12 +246,25 @@ ul {list-style-type: none; padding: 0; margin: 0;}
   .nav-global .logo {
     /* padding */
   }
+
+  /* aside */
+  .col_4-12 {
+    display: none;
+  }
+
+  /* content */
+  .col_7-12 {
+    width: 100%;
+  }
+  .offset_left_1-12 {
+    margin-left: 0;
+  }
 }
 
-@media all and (max-width: 991px) {
+@media all and (min-width: 991px) {
   /* establish columns */
-  .col_4-12,
-  .col_1-4  {width: 32.33%;}
+  .col_3-12,
+  .col_1-3  {width: 23.87%;}
   .col_7-12 {width: 57.70%;}
   .offset_left_1-12 {margin-left: 6.958%;}
 
