@@ -120,7 +120,14 @@ ul {list-style-type: none; padding: 0; margin: 0;}
 .grid {margin-top: 90px;}
 
 /* aside */
-.aside {width: 270px; margin-left: 6.95%;}
+.aside {
+  width: 305px;
+  margin-left: 2%;
+  position: fixed;
+  top: 90px;
+  left: 15px;
+  z-index: 25;
+}
 .aside-header {
   background-color: #ffeb00;
   padding: 20px;
@@ -299,7 +306,7 @@ ul {list-style-type: none; padding: 0; margin: 0;}
   }
 
   /* aside */
-  .col_4-12, .aside {
+  .aside {
     display: none;
   }
 
@@ -334,7 +341,7 @@ ul {list-style-type: none; padding: 0; margin: 0;}
   }
 
   /* aside */
-  .col_4-12 {
+  .aside {
     display: none;
   }
 
@@ -345,16 +352,13 @@ ul {list-style-type: none; padding: 0; margin: 0;}
     margin-right: 5%;
     margin-bottom: 55px;
   }
-  .offset_left_1-12 {
+  .offset_left_5-12 {
     /*margin-left: 0;*/
   }
 }
 
 @media all and (min-width: 991px) {
   /* establish columns */
-  .col_3-12,
-  .col_1-3  {width: 23.87%;}
   .col_7-12 {width: 57.70%;}
-  .offset_left_1-12 {margin-left: 6.958%;}
-
+  .offset_left_5-12 {margin-left: 40.79%;}
 }
