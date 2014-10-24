@@ -117,7 +117,7 @@ ul {list-style-type: none; padding: 0; margin: 0;}
   font-size: .8em;
 }
 
-.grid {margin-top: 100px;}
+.grid {margin-top: 90px;}
 
 /* aside */
 .aside {width: 270px; margin-left: 6.95%;}
@@ -141,6 +141,9 @@ ul {list-style-type: none; padding: 0; margin: 0;}
 .aside-header p:first-child {
   margin-top: 10px;
 }
+.aside-header .articledata a {
+  color: #6d98a8;
+}
 
 .article-list {
   background-color: #313131;
@@ -152,8 +155,17 @@ ul {list-style-type: none; padding: 0; margin: 0;}
 }
 .article-list p {
   background-color: #222;
-  padding: 6px 0 1px;
+  padding: 0 1px;
   margin: 0;
+  text-align: center;
+}
+.article-list p a {
+  display: block;
+  color: #777;
+  font-size: 1.2em;
+}
+.article-list p a:hover {
+  color: #999;
 }
 
 .article-list li {
@@ -190,14 +202,16 @@ ul {list-style-type: none; padding: 0; margin: 0;}
   line-height: 2.8;
 }
 .content-header p:before, .content-footer ul:before {
-  content: "<";
+  font-family: FontAwesome;
+  content: "\f104";
   position: absolute;
   top: 0;
   left: 10px;
   z-index: 20;
 }
 .content-header p:after, .content-footer ul:after {
-  content: ">";
+  font-family: FontAwesome;
+  content: "\f105";
   position: absolute;
   top: 0;
   right: 10px;
